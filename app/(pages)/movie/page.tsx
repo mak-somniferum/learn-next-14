@@ -1,6 +1,6 @@
 import { getMovieList } from '@/api/api';
 import { MovieListItem } from '@/shared/components';
-import styles from 'movie.module.css';
+import styles from './movie.module.css';
 
 export const metadata = {
   title: 'Home',

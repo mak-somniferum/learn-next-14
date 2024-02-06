@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getMovieById } from '@/api/api';
-import potato from 'movie-info.module.css';
+import potato from './movie-info.module.css';
 
 export default async function MovieInfo({ id }: { id: string }) {
   const movie = await getMovieById(id);

@@ -1,5 +1,5 @@
 import { getVideosOfMovie } from '@/api/api';
-import styles from 'movie-videos.module.css';
+import styles from './movie-videos.module.css';
 
 export default async function MovieVideos({ id }: { id: string }) {
   const videos = await getVideosOfMovie(id);

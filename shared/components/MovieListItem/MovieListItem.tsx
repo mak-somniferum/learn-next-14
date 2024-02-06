@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import styles from 'movie-list-item.module.css';
+import styles from './movie-list-item.module.css';
 
 interface MovieProps {
   id: string;
