@@ -1,6 +1,6 @@
-import { getMovieList } from '../../api/api';
-import Movie from '../../components/Movie';
-import styles from '../../styles/home.module.css';
+import { getMovieList } from '@/api/api';
+import { MovieListItem } from '@/shared/components';
+import styles from 'movie.module.css';
 
 export const metadata = {
   title: 'Home',
@@ -12,7 +12,7 @@ export default async function HomePage() {
   return (
     <div className={styles.container}>
       {movies.map((movie) => (
-        <Movie
+        <MovieListItem
           key={movie.id}
           id={movie.id}
           posterPath={movie.poster_path}
