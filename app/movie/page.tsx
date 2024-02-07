@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { Movie } from '@/features/movie';
 
 export const metadata = {
@@ -6,9 +5,5 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  return (
-    <Suspense fallback={<h2>List Loading...</h2>}>
-      <Movie.List />
-    </Suspense>
-  );
+  return <Movie.List />;
 }

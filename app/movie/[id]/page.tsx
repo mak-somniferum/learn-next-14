@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { Movie, getMovieById } from '@/features/movie';
 
 interface Params {
@@ -19,12 +18,8 @@ export async function generateMetadata({ params: { id } }: Params) {
 export default function MovieDetailPage({ params: { id } }: Params) {
   return (
     <>
-      <Suspense fallback={<h2>Information Loading...</h2>}>
-        <Movie.DetailInfo id={id} />
-      </Suspense>
-      <Suspense fallback={<h2>Videos Loading...</h2>}>
-        <Movie.Videos id={id} />
-      </Suspense>
+      <Movie.DetailInfo id={id} />
+      <Movie.Videos id={id} />
     </>
   );
 }
