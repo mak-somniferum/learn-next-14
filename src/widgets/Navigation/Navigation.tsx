@@ -9,10 +9,10 @@ export default function Navigation() {
 
   return (
     <nav className={styles.nav}>
-      <ul>
+      <ul role="list">
         <li>
-          <Link href="/">Home</Link>
-          {pathname === '/' && ' 🔥'}
+          <Link href="/">Movie</Link>
+          {pathname.includes('/movie') && ' 🔥'}
         </li>
         <li>
           <Link href="/about-us">About Us</Link>

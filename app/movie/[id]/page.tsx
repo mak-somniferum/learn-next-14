@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { id } }: Params) {
 export default function MovieDetailPage({ params: { id } }: Params) {
   return (
     <>
-      <Movie.DetailInfo id={id} />
+      <Movie.Description id={id} />
       <Movie.Videos id={id} />
     </>
   );

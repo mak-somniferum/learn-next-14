@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { getMovieById } from '../../api';
-import styles from './detail-info.module.css';
+import styles from './description.module.css';
 
-export default async function DetailInfo({ id }: { id: string }) {
+export default async function Description({ id }: { id: string }) {
   const movie = await getMovieById(id);
 
   return (

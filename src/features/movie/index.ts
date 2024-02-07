@@ -1,9 +1,9 @@
-import DetailInfo from './ui/DetailInfo/DetailInfo';
+import Description from './ui/Description/Description';
 import List from './ui/List/List';
 import Videos from './ui/Videos/Videos';
 
 const movie = {
-  DetailInfo,
+  Description,
   List,
   Videos,
 };

@@ -1,0 +1,28 @@
+.tabs {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: #2d2d2d;
+}
+
+.tabs ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.tabs ul li {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+.tabs ul li:hover {
+  opacity: 1;
+}
+
+.tabs ul li.active {
+  opacity: 1;
+  text-decoration: underline;
+}
