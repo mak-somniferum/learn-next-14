@@ -1,6 +1,6 @@
-import { Navigation } from '@/shared/components';
+import { Navigation } from '@/widgets';
 
-export default function PagesLayout({
+export default function RootTemplate({
   children,
 }: {
   children: React.ReactNode;

@@ -1,24 +1,14 @@
-import { getMovieList } from '@/api/api';
-import { MovieListItem } from '@/shared/components';
-import styles from './movie.module.css';
+import { Suspense } from 'react';
+import { Movie } from '@/features/movie';
 
 export const metadata = {
   title: 'Home',
 };
 
-export default async function HomePage() {
-  const movies = await getMovieList();
-
+export default function HomePage() {
   return (
-    <div className={styles.container}>
-      {movies.map((movie) => (
-        <MovieListItem
-          key={movie.id}
-          id={movie.id}
-          posterPath={movie.poster_path}
-          title={movie.title}
-        />
-      ))}
-    </div>
+    <Suspense fallback={<h2>List Loading...</h2>}>
+      <Movie.List />
+    </Suspense>
   );
 }

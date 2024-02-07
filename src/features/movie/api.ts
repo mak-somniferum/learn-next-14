@@ -1,17 +1,4 @@
-export type User = {
-  id: number;
-  name: string;
-  email: string;
-};
-
-export async function getUsers() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
-  const users = (await res.json()) as User[];
-  return users;
-}
-
-export const MOVIE_API_URL =
-  'https://nomad-movies.nomadcoders.workers.dev/movies';
+import { MOVIE_API_URL } from './consts';
 
 export async function getMovieList() {
   const response = await fetch(MOVIE_API_URL);

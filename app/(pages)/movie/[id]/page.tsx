@@ -1,14 +1,13 @@
 import { Suspense } from 'react';
-import { getMovieById } from '@/api/api';
-import { MovieInfo, MovieVideos } from '@/shared/components';
+import { Movie, getMovieById } from '@/features/movie';
 
-interface IParams {
+interface Params {
   params: {
     id: string;
   };
 }
 
-export async function generateMetadata({ params: { id } }: IParams) {
+export async function generateMetadata({ params: { id } }: Params) {
   const movie = await getMovieById(id);
 
   return {
@@ -17,15 +16,15 @@ export async function generateMetadata({ params: { id } }: IParams) {
   };
 }
 
-export default function MovieDetailPage({ params: { id } }: IParams) {
+export default function MovieDetailPage({ params: { id } }: Params) {
   return (
-    <div>
-      <Suspense fallback={<div>Description Loading...</div>}>
-        <MovieInfo id={id} />
+    <>
+      <Suspense fallback={<h2>Information Loading...</h2>}>
+        <Movie.DetailInfo id={id} />
       </Suspense>
-      <Suspense fallback={<div>Videos Loading...</div>}>
-        <MovieVideos id={id} />
+      <Suspense fallback={<h2>Videos Loading...</h2>}>
+        <Movie.Videos id={id} />
       </Suspense>
-    </div>
+    </>
   );
 }

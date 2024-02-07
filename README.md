@@ -14,9 +14,12 @@ https://learn-next-14-2w69ktxyc-jins-projects-8acd64d4.vercel.app/
 Tried [Feature-Sliced Design](https://feature-sliced.design/); check [this](https://emewjin.github.io/feature-sliced-design/) out.
 
 ```text
-├─ app/
-│ ├─ \_styles/  Global styles
-│ ├─ (pages)/   Replace 'src/pages' folder
-├─ shared/
-│ └─ components/
+├─ app/ Next.js URL Path
+├─ src/
+│  ├─ app/
+│  │ ├─ styles/      Global styles
+│  ├─ features/      api, UI, consts, etc of Features
+│  │ └─ movie/
+│  ├─ widgets/       Unique UI Components
+│  │ └─ Navigation/
 ```
